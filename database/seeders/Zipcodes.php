@@ -7,6 +7,7 @@ use App\Models\FederalEntity;
 use App\Models\Municipality;
 use App\Models\Zipcode;
 use App\Models\Settlement;
+use Illuminate\Support\Str;
 
 class Zipcodes extends Seeder
 {
@@ -42,8 +43,9 @@ class Zipcodes extends Seeder
             for ($i = 0; $i < 10; $i++) {
 
                 $settlement = Settlement::create([
+                    "name" =>  Str::random(10),
                     "key" => rand(1, 100),
-                    "zone_type" => $zone_type[rand(0, 3)],
+                    "zone_type" => $zone_type[rand(0, 2)],
                     "settlement_type" => 1,
                     "municipality" => $municipality->id,
                     "zip_code" => $zipcode->id

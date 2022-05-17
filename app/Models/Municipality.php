@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\FederalEntity;
 use App\Models\Settlement;
+use App\Models\Zipcode;
 
 class Municipality extends Model
 {
@@ -20,5 +21,10 @@ class Municipality extends Model
     public function settlements()
     {
         return $this->hasMany(Settlement::class);
+    }
+
+    public function zip_c()
+    {
+        return $this->hasMany(Zipcode::class,"municipality","id");
     }
 }
