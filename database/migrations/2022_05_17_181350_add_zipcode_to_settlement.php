@@ -14,7 +14,7 @@ class AddZipcodeToSettlement extends Migration
     public function up()
     {
         Schema::table('settlements', function (Blueprint $table) {
-           $table->addColumn("integer","zip-code");
+           $table->addColumn("integer","zip_code");
         });
     }
 
@@ -26,7 +26,7 @@ class AddZipcodeToSettlement extends Migration
     public function down()
     {
         Schema::table('settlement', function (Blueprint $table) {
-            $table->removeColumn("zip-code");
+            $table->removeColumn("zip_code");
         });
     }
 }

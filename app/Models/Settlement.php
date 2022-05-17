@@ -9,7 +9,7 @@ use App\Models\Municipality;
 class Settlement extends Model
 {
     use HasFactory;
-    protected $fillable = ['key','name','federal_entity'];
+    protected $fillable = ['key','name','federal_entity',"zip_code"];
     
     public function municipalities()
     {
