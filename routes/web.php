@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::post("/import-data", [ImportData::class, 'import'])->name("import");
+Route::get("/import-data", [ImportData::class, 'import'])->name("import");
 
 Route::get("import",function()
 {
